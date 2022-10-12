@@ -113,6 +113,10 @@ color: #7f8c8d;
    .slider-item__image{
     height:162px ;
 }
+.swiper-container{
+    margin-bottom: 0;
+}
+
 }
 @media (max-width:460px){
     .slider-item__image{
