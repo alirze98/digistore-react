@@ -15,6 +15,10 @@
   margin-left: 5px;
   width: 20px;
 }
+.loader{
+  display: flex;
+  margin: 0 auto;
+}
 @media (max-width:1200px){
     .draggable-carousel{
         padding: 0 40px;
