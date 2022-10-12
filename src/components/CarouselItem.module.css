@@ -12,10 +12,10 @@
 .carousel-item .title {
   color: #6c6c6c;
   font-size: 0.8em;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .carousel-item .price {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .carousel-item .actions {
   display: flex;
