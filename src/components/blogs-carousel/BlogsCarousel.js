@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import classes from "./BlogsCarousel.module.css";
 import SubHeading from "../common/SubHeading";
-import blogIcon from "../../assets/blog-icon.svg";
 import axios from "axios";
 import BlogsCarouselItems from "./BlogsCarouselItems";
+import blogIcon from "../../assets/blog-icon.svg";
+import loaderGif from "../../assets/loader.gif"
+
 const BlogsCarousel = () => {
   const [blogsItems, setBlogsItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -12,7 +14,7 @@ const BlogsCarousel = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("https://digistore.glitch.me/blogs")
+      .get("https://digistore.glitch.me/blo")
       .then((response) => {
         setBlogsItems(response.data);
         console.log(response.data);
@@ -27,7 +29,9 @@ const BlogsCarousel = () => {
   return (
     <div className={classes["blogs-carousel"]}>
       <SubHeading icon={blogIcon} title={"جدیدترین مقالات"} />
-      <BlogsCarouselItems data={blogsItems} />
+      {isLoading && <img src={loaderGif} alt='gif' className={classes.loader} />}
+      {errors && <h4 className={classes.errors}>some thing went wrong</h4>}
+      {!isLoading && !errors && <BlogsCarouselItems data={blogsItems} />}
     </div>
   );
 };
