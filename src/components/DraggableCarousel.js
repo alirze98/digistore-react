@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import productIcon from "../assets/product-icon.svg";
 import classes from "./DraggableCarousel.module.css";
+import productIcon from "../assets/product-icon.svg";
 import axios from "axios";
 import CarouselItems from "./CarouselItems";
 import loaderGif from "../assets/loader.gif"
+import SubHeading from "./common/SubHeading";
 
 const DraggableCarousel = () => {
   const [carouselItems, setCarouselItems] = useState([]);
@@ -17,16 +18,15 @@ const DraggableCarousel = () => {
          setIsLoading(false)
      }).catch(error =>{
         setErrors(true)
+        setIsLoading(false)
      })
   }, []);
   return (
     <div className={classes["draggable-carousel"]}>
-      <div className={classes.title}>
-        <img src={productIcon} alt="productIcon" />
-        <span>جدیدترین محصولات</span>
-      </div>
+      <SubHeading icon={productIcon} title={'جدیدترین محصولات'} />
       { isLoading &&<img src={loaderGif} alt="loader" className={classes.loader} /> }
-      {!isLoading &&<CarouselItems data={carouselItems} />}
+      {!isLoading && !errors && <CarouselItems data={carouselItems} />}
+      {errors && <div className={classes.error}>something went wrong</div>}
     </div>
   );
 };

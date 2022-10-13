@@ -1,5 +1,6 @@
 .banners-container{
     padding: 0 75px;
+    margin-bottom: 40px;
 }
 .banner{
     width: 100%;
@@ -17,10 +18,12 @@
 @media (max-width:992px){
     .banners-container{
         padding: 0 10px;
+        margin-bottom: 00px;
     }
     .banner{
         height: 286px;
     }
+
 }
 @media (max-width:768px){
     .banner{
