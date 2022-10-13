@@ -16,6 +16,12 @@ import creditcardIcon from "../../assets/credit-card.svg";
 import classes from "./Slider.module.css";
 
 const Slider = () => {
+  const banners = [banner2,banner3,banner4];
+  const swiperContent = banners.map(banner =>{
+    return <SwiperSlide className={classes["slider-item"]}>
+      <img src={banner} alt="banner" className={classes['slider-item__image']} />
+    </SwiperSlide>
+  })
   return (
     <>
       <div className={classes["swiper-container"]}>
@@ -37,27 +43,7 @@ const Slider = () => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
-          <SwiperSlide className={classes["slider-item"]}>
-            <img
-              src={banner2}
-              alt="banner2"
-              className={classes["slider-item__image"]}
-            />
-          </SwiperSlide>
-          <SwiperSlide className={classes["slider-item"]}>
-            <img
-              src={banner3}
-              alt="banner2"
-              className={classes["slider-item__image"]}
-            />
-          </SwiperSlide>
-          <SwiperSlide className={classes["slider-item"]}>
-            <img
-              src={banner4}
-              alt="banner2"
-              className={classes["slider-item__image"]}
-            />
-          </SwiperSlide>
+          {swiperContent}
         </Swiper>
         <div className={classes.access}>
           <div className={classes["access-item"]}>
