@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from './CarouselItem.module.css';
 // images 
-import subtractionIcon from '../assets/subtraction.svg'
-import plusIcon from '../assets/plus.svg';
-import trashIcon from '../assets/trash.svg';
-import heartIcon from '../assets/heart.svg';
+import subtractionIcon from '../../assets/subtraction.svg'
+import plusIcon from '../../assets/plus.svg';
+import trashIcon from '../../assets/trash.svg';
+import heartIcon from '../../assets/heart.svg';
 // custom hook
-import useChangeNumberToPersian from '../hooks/use-change-number-to-persian.js';
+import useChangeNumberToPersian from '../../hooks/use-change-number-to-persian.js';
 
 
 const CarouselItem = (props) => {

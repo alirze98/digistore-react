@@ -6,12 +6,12 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination, Autoplay, Navigation} from "swiper";
 // images
-import banner2 from "../assets/banner2.jpg";
-import banner3 from "../assets/banner3.jpg";
-import banner4 from "../assets/banner4.jpg";
-import supportIcon from "../assets/support.svg";
-import truckIcon from "../assets/truck.svg";
-import creditcardIcon from "../assets/credit-card.svg";
+import banner2 from "../../assets/banner2.jpg";
+import banner3 from "../../assets/banner3.jpg";
+import banner4 from "../../assets/banner4.jpg";
+import supportIcon from "../../assets/support.svg";
+import truckIcon from "../../assets/truck.svg";
+import creditcardIcon from "../../assets/credit-card.svg";
 // classes
 import classes from "./Slider.module.css";
 

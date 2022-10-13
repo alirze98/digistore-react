@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import classes from "./DraggableCarousel.module.css";
-import productIcon from "../assets/product-icon.svg";
 import axios from "axios";
 import CarouselItems from "./CarouselItems";
-import loaderGif from "../assets/loader.gif"
-import SubHeading from "./common/SubHeading";
+import SubHeading from "../common/SubHeading";
+import productIcon from "../../assets/product-icon.svg";
+import loaderGif from "../../assets/loader.gif"
 
 const DraggableCarousel = () => {
   const [carouselItems, setCarouselItems] = useState([]);

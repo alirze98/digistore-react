@@ -1,17 +1,17 @@
-import React from 'react';
-import Banners from '../components/Banners';
-import BlogsCarousel from '../components/BlogsCarousel';
-import DraggableCarousel from '../components/DraggableCarousel';
-import Slider from '../components/Slider';
+import React from "react";
+import Banners from "../components/banners/Banners";
+import BlogsCarousel from "../components/blogs-carousel/BlogsCarousel";
+import DraggableCarousel from "../components/draggable-carousel/DraggableCarousel";
+import Slider from "../components/slider/Slider";
 const Home = () => {
-    return (
-        <div>
-            <Slider />
-            <DraggableCarousel />
-            <Banners />
-            <BlogsCarousel />
-        </div>
-    );
+  return (
+    <div>
+      <Slider />
+      <DraggableCarousel />
+      <Banners />
+      <BlogsCarousel />
+    </div>
+  );
 };
 
 export default Home;

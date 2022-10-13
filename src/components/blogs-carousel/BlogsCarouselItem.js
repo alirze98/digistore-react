@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './BlogsCarouselItem.module.css'
 // images
-import arrowIcon from '../assets/b-l-arrow.svg'
-import viewIcon from '../assets/views.svg'
-import heartIcon from '../assets/heart.svg'
-import useChangeNumberToPersian from '../hooks/use-change-number-to-persian';
+import arrowIcon from '../../assets/b-l-arrow.svg'
+import viewIcon from '../../assets/views.svg'
+import heartIcon from '../../assets/heart.svg'
+import useChangeNumberToPersian from '../../hooks/use-change-number-to-persian';
 
 const BlogsCarouselItem = (props) => {
     const description = `${props.desc.substr(0,100)} ...`;

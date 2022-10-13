@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import banner1 from '../assets/half-banner1.jpg'
-import banner2 from '../assets/half-banner2.jpg'
+import banner1 from '../../assets/half-banner1.jpg'
+import banner2 from '../../assets/half-banner2.jpg'
 import classes from './Banners.module.css'
 
 const Banners = () => {
