@@ -14,7 +14,7 @@ const BlogsCarousel = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("https://digistore.glitch.me/blo")
+      .get("https://digistore.glitch.me/blogs")
       .then((response) => {
         setBlogsItems(response.data);
         console.log(response.data);
