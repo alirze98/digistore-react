@@ -24,7 +24,6 @@
   color: #868686;
   line-height: 1.5;
   text-align: justify;
-
 }
 
 .blogs-carousel-item .actions {
@@ -85,12 +84,15 @@
   color: #0089ff;
   border-radius: 5px;
 }
-.actions .actions-read-more div {
-}
+
 .actions .actions-read-more img {
   margin-right: 5px;
 }
-
+@media (max-width: 1200px) {
+  .blogs-carousel-item .desc {
+    margin-bottom: 10px;
+  }
+}
 @media (max-width: 576px) {
   .blogs-carousel-item {
     padding: 5px 20px;
@@ -101,7 +103,7 @@
   .blogs-carousel-item .image {
     border-radius: 1px;
   }
-  .blogs-carousel-item .desc.blogs-page-desc{
+  .blogs-carousel-item .desc.blogs-page-desc {
     margin-bottom: 20px;
   }
 }
