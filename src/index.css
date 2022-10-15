@@ -2,7 +2,11 @@
   font-family:iranYekan ;
   src: url(./fonts/iranyekanwebregular.ttf);
 }
-
+:root {
+  --main-gray: #666;
+  --light-gray: #d2d2d2;
+  --main-blue: #0089ff;
+}
 *{
   margin: 0;
   padding: 0;

@@ -1,19 +1,17 @@
-:root {
-  --main-gray: #666;
-  --light-gray: #d2d2d2;
-  --main-blue: #0089ff;
-}
-.nav-responsive{
-    display: none;
-    
+.nav-responsive {
+  display: none;
 }
 .nav {
   padding: 15px 75px 0px;
   font-size: 1em;
-  
 }
 .nav-top {
   margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 75px 0px;
+  background-color: white;
 }
 .search {
   display: flex;
@@ -83,6 +81,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  display: none;
 }
 .nav-responsive__top .logo {
   width: 92px;
@@ -106,44 +105,53 @@
   color: white;
 }
 .nav-responsive__cart img {
-
 }
 .nav-responsive__bottom {
-    padding: 5px 10px;
-   
+  padding: 5px 10px;
 }
 .nav-responsive__bottom .nav-responsive__search {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
 }
-.nav-responsive__bottom .nav-responsive__search input{
-    border: none;
-    background-color: transparent;
-    outline: 0;
-    width: 100%;
+.nav-responsive__bottom .nav-responsive__search input {
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  width: 100%;
 }
 .nav-responsive__heart {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .nav-responsive__heart img {
 }
 .nav-responsive__heart button {
-    border: none;
-    background-color: var(--main-blue);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
+  border: none;
+  background-color: var(--main-blue);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 @media (max-width: 992px) {
-    .nav{
-        display: none;
-    }
-    .nav-responsive{
-        display: block;
-    }
+  .nav {
+    display: none;
+  }
+  .nav-top{
+    display: none;
+  }
+  .nav-responsive{
+    display: block;
+  }
+  .nav-responsive__top{
+    display: flex;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background-color: white;
+  } 
+
 }

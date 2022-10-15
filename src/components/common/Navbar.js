@@ -5,7 +5,7 @@ import logo from "../../assets/logo.svg";
 import searchIcon from "../../assets/search.svg";
 import userIcon from "../../assets/user.svg";
 import cartIcon from "../../assets/cart.svg"
-import { Badge, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import Divider from '@mui/material/Divider';
 import { FaBars } from "react-icons/fa";
 import heartIcon from "../../assets/heart.svg"
@@ -13,7 +13,6 @@ import heartIcon from "../../assets/heart.svg"
 const Navbar = () => {
   return (
     <>
-    <nav className={classes.nav}>
      <div className={classes['nav-top']}>
         <Grid container>
           <Grid item lg={3.5} md={3.5} sm={3.5} xs={3.5}>
@@ -37,6 +36,7 @@ const Navbar = () => {
           </Grid>
         </Grid>
      </div>
+    <nav className={classes.nav}>
      <div className={classes['nav-bottom']}>
           <ul className={classes.list}>
             <li className={classes['list-item']}>
@@ -59,9 +59,7 @@ const Navbar = () => {
             </li>
           </ul>
      </div>
-   
     </nav>
-    <nav className={classes['nav-responsive']}>
       <div className={classes['nav-responsive__top']}>
         <FaBars />
         <img src={logo} alt="" className={classes.logo} />
@@ -70,6 +68,7 @@ const Navbar = () => {
           <img src={cartIcon} alt=""  />
         </div>
       </div>
+    <nav className={classes['nav-responsive']}>
       <Divider />
       <div className={classes['nav-responsive__bottom']}>
         <Grid container spacing={{md:10,sm:5,xs:3}}>
