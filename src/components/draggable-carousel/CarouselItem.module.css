@@ -4,6 +4,9 @@
   text-align: center;
   box-shadow: 0 0 7px -5px #5a5a5a;
 }
+.carousel-item.shopItem{
+  margin-bottom: 10px;
+}
 .carousel-item .phone-image {
   width: 150px;
   height: 150px;
@@ -31,6 +34,9 @@
   align-items: center;
   color: #d1d1d1;
 }
+.carousel-item .actions .btns.shopItem{
+  width: 45%;
+}
 .btns .plus-icon {
   width: 11.43px;
 }
@@ -45,6 +51,9 @@
 .actions .heart-icon {
   width: 25px;
   height: 35px;
+}
+.actions.shopItem .heart-icon{
+width: 20px;
 }
 
 @media (max-width: 992px) {
@@ -61,6 +70,34 @@
         width:120px ;
         height:120px ;
     }
+}
+@media (max-width:600px){
+  .carousel-item.shopItem{
+   display: flex;
+   text-align: start;
+   box-shadow: none;
+   border-bottom: 1px solid rgb(236, 233, 233);
+  }
+  .carousel-item.shopItem .phone-image{
+    width: 140px;
+    height: 140px;
+  }
+  .carousel-item.shopItem  .title{
+    margin-right: 20px;
+    
+  }
+  .carousel-item.shopItem  .price{
+    margin-right: 20px;
+   
+  }
+  .carousel-item.shopItem .actions {
+    justify-content: space-around;
+  }
+  .carousel-item.shopItem .actions .btns{
+    width: 40%;
+    justify-content: space-around;
+   
+  }
 }
 @media (max-width: 460px) {
     .carousel-item .phone-image {

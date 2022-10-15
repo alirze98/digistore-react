@@ -23,6 +23,7 @@
   font-size: 14px;
   line-height: 25px;
   margin-bottom: 50px;
+  text-align: justify;
 }
 .centered-logo-container {
   display: flex;

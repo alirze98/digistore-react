@@ -6,16 +6,14 @@
   font-size: 1em;
 }
 .nav-top {
-  
   margin-bottom: 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
   padding: 15px 75px 0px;
   background-color: white;
-  
 }
-.nav-top-container{
+.nav-top-container {
   display: flex;
   align-items: center;
 }
@@ -146,18 +144,17 @@
   .nav {
     display: none;
   }
-  .nav-top{
+  .nav-top {
     display: none;
   }
-  .nav-responsive{
+  .nav-responsive {
     display: block;
   }
-  .nav-responsive__top{
+  .nav-responsive__top {
     display: flex;
-    position:sticky;
-    top:0;
-    z-index:1000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: white;
-  } 
-
+  }
 }
