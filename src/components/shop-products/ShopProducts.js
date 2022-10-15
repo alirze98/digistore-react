@@ -22,7 +22,7 @@ const ShopProducts = () => {
     },[])
     return (
         <div className={classes['shop-products']}>
-            <Filter />
+            <Filter title={'فروشگاه'} subTitle={'فروشگاه'} info={'همه کالا ها'} subInfo={'۱۴ کالا'} />
            {!isLoading && !errors &&  <Grid container columns={{xl:7,lg:5,md:3,sm:2,xs:1}} rowSpacing={{xl:1}} className={classes.products}>
                 <ShopProductsList data={products} />
             </Grid>}
