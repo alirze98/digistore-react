@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <>
      <div className={classes['nav-top']}>
-        <Grid container>
+        <Grid container className={classes['nav-top-container']}>
           <Grid item lg={3.5} md={3.5} sm={3.5} xs={3.5}>
             <img src={logo} className={classes.logo} />
           </Grid>

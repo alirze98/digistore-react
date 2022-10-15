@@ -6,12 +6,18 @@
   font-size: 1em;
 }
 .nav-top {
+  
   margin-bottom: 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
   padding: 15px 75px 0px;
   background-color: white;
+  
+}
+.nav-top-container{
+  display: flex;
+  align-items: center;
 }
 .search {
   display: flex;
