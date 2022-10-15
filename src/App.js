@@ -3,6 +3,7 @@ import Navbar from './components/common/Navbar';
 import Cart from './pages/Cart';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import Blogs from './pages/Blogs'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/shop' element={<Shop />} />
       <Route path='/cart' element={<Cart />} />
+      <Route path='/blogs' element={<Blogs />} />
     </Routes>
     </>
   );
