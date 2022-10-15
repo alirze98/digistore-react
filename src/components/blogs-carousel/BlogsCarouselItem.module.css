@@ -16,14 +16,17 @@
   margin-bottom: 10px;
   font-size: 0.8em;
   color: #656262;
+  text-align: justify;
 }
 .blogs-carousel-item .desc {
   flex-grow: 1;
   font-size: 0.8em;
   color: #868686;
   line-height: 1.5;
-  word-spacing: 3px;
+  text-align: justify;
+
 }
+
 .blogs-carousel-item .actions {
   display: flex;
   justify-content: space-between;
@@ -98,6 +101,9 @@
   .blogs-carousel-item .image {
     border-radius: 1px;
   }
+  .blogs-carousel-item .desc.blogs-page-desc{
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 460px) {
   .blogs-carousel-item {
@@ -112,7 +118,7 @@
 }
 @media (max-width: 400px) {
   .blogs-carousel-item {
-    padding: 5px 20px;
+    padding: 15px 20px;
   }
   .blogs-carousel-item .title {
     margin-bottom: 20px;

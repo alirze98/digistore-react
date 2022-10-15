@@ -15,7 +15,7 @@ const BlogsCarouselItem = (props) => {
         <div className={classes['blogs-carousel-item']}>
             <img src={props.image} alt="thumbnail" className={classes.image} />
             <h4 className={classes.title}>{props.title}</h4>
-            <div className={classes.desc}>{description}</div>
+            <div className={`${classes.desc} ${props.isInBlogsPage?classes['blogs-page-desc']:''}`}>{description}</div>
             <div className={classes.actions}>
                 <div className={classes['actions-date']}>۱۲/ ۵ / ۱۴۰۱</div>
                 <div className={classes['actions-view']}>
