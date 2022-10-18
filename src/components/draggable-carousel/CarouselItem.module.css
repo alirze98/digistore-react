@@ -34,6 +34,16 @@
   align-items: center;
   color: #d1d1d1;
 }
+.carousel-item .actions  .button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
 .carousel-item .actions .btns.shopItem{
   width: 45%;
 }

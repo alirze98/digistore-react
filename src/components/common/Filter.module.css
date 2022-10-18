@@ -1,14 +1,17 @@
+
 .divider{
     margin-bottom: 15px!important;
 }
 .divider-bottom{
     display: none;
 }
-
- .sub-heading{
+.sub-heading{
 display: flex;
 justify-content: space-between;
 margin-bottom: 80px;
+}
+.sub-heading.less-margin{
+    margin-bottom: 20px;
 }
 .sub-heading .icons{
 display: flex;

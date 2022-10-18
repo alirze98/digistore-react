@@ -17,7 +17,6 @@ const BlogsCarousel = () => {
       .get("https://digistore.glitch.me/blogs")
       .then((response) => {
         setBlogsItems(response.data);
-        console.log(response.data);
         setIsLoading(false);
       })
       .catch((error) => {

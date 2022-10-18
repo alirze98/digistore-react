@@ -16,6 +16,8 @@ const CarouselItems = (props) => {
           title={item.title}
           price={item.price}
           image={item.image}
+          id={item.id}
+          count={1}
         />
       </SwiperSlide>
     );

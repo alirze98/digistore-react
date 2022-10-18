@@ -9,6 +9,7 @@ import { Grid } from "@mui/material";
 import Divider from '@mui/material/Divider';
 import { FaBars } from "react-icons/fa";
 import heartIcon from "../../assets/heart.svg"
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -31,7 +32,7 @@ const Navbar = () => {
             </div>
            <div className={classes.cart}>
            <span className={classes['cart-amoutn']}>۰</span>
-            <img src={cartIcon} />
+            <Link to={'/cart'}><img src={cartIcon} /></Link>
            </div>
           </Grid>
         </Grid>

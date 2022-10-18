@@ -4,11 +4,11 @@ import homeIcon from '../../assets/home.svg'
 import arrowIcon from '../../assets/aria-left.svg'
 import { Divider } from '@mui/material';
 
-const Filter = ({title,subTitle,info,subInfo}) => {
+const Filter = ({title,subTitle,info,subInfo,isInCart}) => {
   return (
     <>
-      <Divider className={`${classes.divider} ${classes["divider-top"]}`} />
-      <div className={classes["sub-heading"]}>
+      <Divider className={`${classes.divider} ${classes["divider-top"]} `} />
+      <div className={`${classes["sub-heading"]} ${isInCart ? classes['less-margin'] : ''}`}>
         <div className={classes["icons"]}>
           <img src={homeIcon} alt="icon" className={classes["home-icon"]} />
           <img src={arrowIcon} alt="icon" className={classes["arrow-icon"]} />
