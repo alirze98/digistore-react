@@ -7,7 +7,7 @@ import { Divider } from '@mui/material';
 const Filter = ({title,subTitle,info,subInfo,isInCart}) => {
   return (
     <>
-      <Divider className={`${classes.divider} ${classes["divider-top"]} `} />
+       {!isInCart && <Divider className={`${classes.divider} ${classes["divider-top"]} ${isInCart ? classes.hidden : ''} `} />}
       <div className={`${classes["sub-heading"]} ${isInCart ? classes['less-margin'] : ''}`}>
         <div className={classes["icons"]}>
           <img src={homeIcon} alt="icon" className={classes["home-icon"]} />
@@ -16,7 +16,7 @@ const Filter = ({title,subTitle,info,subInfo,isInCart}) => {
         </div>
         <h4 className={classes.title}>{subTitle}</h4>
       </div>
-      <Divider className={`${classes.divider} ${classes["divider-bottom"]}`} />
+      { !isInCart && <Divider className={`${classes.divider} ${classes["divider-bottom"]}`} />}
       <div className={classes["products-count"]}>
         <span className={classes["products-count__all"]}>{info}</span>
         <span className={classes["products-count__amount"]}>{subInfo}</span>

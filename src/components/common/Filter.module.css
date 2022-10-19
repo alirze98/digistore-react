@@ -2,6 +2,9 @@
 .divider{
     margin-bottom: 15px!important;
 }
+.divider.divider-top.hidden{
+    display: none;
+}
 .divider-bottom{
     display: none;
 }
@@ -11,7 +14,7 @@ justify-content: space-between;
 margin-bottom: 80px;
 }
 .sub-heading.less-margin{
-    margin-bottom: 20px;
+    margin-bottom: -30px;
 }
 .sub-heading .icons{
 display: flex;
