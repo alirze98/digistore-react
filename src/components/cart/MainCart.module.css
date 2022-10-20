@@ -88,47 +88,7 @@
     border: none;
     color: red;
 }
-.checked-container{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-width: 100%;
-height: 100vh;
-}
-.checked-container .checked-image{
-width:300px;
-height: 300px;
-margin-bottom: 30px;
 
-}
-.checked-container .done{
-margin-bottom: 30px;
-}
-.checked-container button{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-background-color: var(--main-blue);
-color: white;
-border: none;
-padding: 10px;
-border-radius: 5px;
-cursor: pointer;
-transition: .5s ease ;
-}
-.checked-container button:hover{
-    background-color: #1f92f7;
-}
-.checked-container button span{
-
-}
-.checked-container button img{
-    width: 15px;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(221deg)
-    brightness(200%) contrast(101%);
-    margin-right: 10px;
-}
 @media (max-width: 992px) {
   .main-cart {
     padding: 0 10px;

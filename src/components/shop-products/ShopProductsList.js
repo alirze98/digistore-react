@@ -11,6 +11,8 @@ const ShopProductsList = (props) => {
           title={item.title}
           price={item.price}
           isShopItem={true}
+          count={1}
+          id={item.id}
         />
       </Grid>
     );

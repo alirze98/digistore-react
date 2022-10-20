@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../../store/cart-slice";
 import classes from "./MainCart.module.css";
 import useChangeNumberToPersian from "../../hooks/use-change-number-to-persian";
 import CartItem from "./CartItem";
@@ -10,13 +11,10 @@ import cartIcon from "../../assets/cart.svg";
 import productIcon from '../../assets/product-icon.svg'
 import listIcon from '../../assets/list.svg';
 import checkOutIcon from '../../assets/checkout-cart.svg';
-import emptyCart from '../../assets/empty-cart.jpg';
-import okImage from '../../assets/ok3d.jpg';
-import arrowIcon from '../../assets/b-l-arrow.svg';
+
 
 
 const MainCart = (props) => {
-  const [checked,setChecked] = useState(false);
   const cart = useSelector((state) => state.cart.cart);
   const item = cart.find((item) => item.id === props.id);
   const totalItemsArr = cart.map((item) => item.count);
@@ -37,18 +35,19 @@ const MainCart = (props) => {
         title={item.title}
         price={item.price}
         count={item.count}
+        id={item.id}
       />
     );
   });
   const totalLength = useChangeNumberToPersian(cart.length);
   const totalItemsContent = useChangeNumberToPersian(totalItems)
   const checkBtnHandler = () => {
-    setChecked(true)
-
+    props.onEmptyCart()
+    
   }
 
   return (
-    !checked ? <div className={classes["main-cart"]}>
+    <div className={classes["main-cart"]}>
     <Filter title={"سبد خرید"} subTitle={"سبد خرید"} isInCart={true} />
     <Grid container spacing={5}>
       <Grid item xl={8} lg={8} md={8} sm={12} xs={12}>
@@ -88,15 +87,7 @@ const MainCart = (props) => {
         </div>
       </Grid>
     </Grid>
-  </div>:
-    <div className={classes['checked-container']}>
-      <img src={okImage} alt="image" className={classes['checked-image']} />
-      <div className={classes.done}>تسویه حساب با موفقیت انجام شد</div>
-      <button onClick={checkBtnHandler}>
-        <span>محصولات بیشتر</span>
-        <img src={arrowIcon} alt="icon" />
-        </button>
-    </div>
+  </div>
   );
 };
 

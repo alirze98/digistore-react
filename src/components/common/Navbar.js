@@ -10,8 +10,16 @@ import Divider from '@mui/material/Divider';
 import { FaBars } from "react-icons/fa";
 import heartIcon from "../../assets/heart.svg"
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import useChangeNumberToPersian from "../../hooks/use-change-number-to-persian";
 
 const Navbar = () => {
+  const cart = useSelector((state) => state.cart.cart);
+  const totalItemsArr = cart.map((item) => item.count);
+  const totalItems = totalItemsArr.reduce((acc, cv) => {
+    return acc + cv;
+  }, 0);
+  const totalItemsContent = useChangeNumberToPersian(totalItems)
   return (
     <>
      <div className={classes['nav-top']}>
@@ -31,7 +39,7 @@ const Navbar = () => {
               <span>ورود / ثبت نام</span>
             </div>
            <div className={classes.cart}>
-           <span className={classes['cart-amoutn']}>۰</span>
+           <span className={classes['cart-amoutn']}>{totalItemsContent}</span>
             <Link to={'/cart'}><img src={cartIcon} /></Link>
            </div>
           </Grid>

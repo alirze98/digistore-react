@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./CarouselItem.module.css";
 // images
 import subtractionIcon from "../../assets/subtraction.svg";
@@ -7,13 +7,18 @@ import trashIcon from "../../assets/trash.svg";
 import heartIcon from "../../assets/heart.svg";
 // custom hook
 import useChangeNumberToPersian from "../../hooks/use-change-number-to-persian.js";
-import { useDispatch } from "react-redux";
+// redux
+import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
+import { checkActions } from "../../store/check-slice";
 
 const CarouselItem = (props) => {
   const dispatch = useDispatch();
   const title = `${props.title.substr(0, 45)}...`;
   const persianNumber = useChangeNumberToPersian(props.price.toLocaleString());
+  const cartArr = useSelector(state => state.cart.cart);
+  const itemInCart = cartArr.find(item => item.id === props.id);
+  
   const incrementBtnHandler = () => {
     dispatch(
       cartActions.incrementItem({
@@ -24,6 +29,8 @@ const CarouselItem = (props) => {
         id: props.id,
       })
     );
+    dispatch(checkActions.unChecked())
+  
   };
   const decrementBtnHandler = () => {
     dispatch(cartActions.decrementItem(props.id));
@@ -54,7 +61,7 @@ const CarouselItem = (props) => {
             <button className={classes.button} onClick={incrementBtnHandler}>
               <img src={plusIcon} alt="icon" className={classes["plus-icon"]} />
             </button>
-            <span className={classes.count}>۰</span>
+            <span className={classes.count}>{itemInCart? itemInCart.count: 0}</span>
             <button className={classes.button} onClick={decrementBtnHandler}>
               {" "}
               <img

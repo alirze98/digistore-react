@@ -44,7 +44,17 @@
     height: 32px;
     width: 100px;
     border-radius: 5px;
-
+}
+.cart-item  .actions .btns span{
+    color: #474747;
+}
+.cart-item  .actions .btns .btn{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
 }
 
 @media (max-width:992px){
@@ -67,6 +77,9 @@
     .cart-item  .actions .btns{
         width: 60px;
         font-size: 12px;
+    }
+    .cart-item  .actions .btns .btn{
+        
     }
     
 }
