@@ -56,6 +56,11 @@
     border: none;
     cursor: pointer;
 }
+.cart-item  .actions .trash{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
 @media (max-width:992px){
     .cart-item>img {

@@ -27,6 +27,9 @@ const CartItem = (props) => {
     const decrementHandler = () => {
         dispatch(cartActions.decrementItem(props.id));
     }
+    const trashClickHandler = () => {
+        dispatch(cartActions.removeItem(props.id))
+    }
     return (
         <div className={classes['cart-item']}>
             <img src={props.image} alt="image" />
@@ -41,7 +44,7 @@ const CartItem = (props) => {
                         <span>{itemInCart?itemInCart.count:1}</span>
                         <button onClick={decrementHandler} className={classes.btn}><img src={subtractionIcon} alt="icon" /></button>
                     </div>
-                    <img src={trashIcon} alt="icon" />
+                   <button onClick={trashClickHandler} className={classes.trash}><img src={trashIcon} alt="icon" /></button>
                 </div>
             </div>
         </div>
