@@ -52,8 +52,8 @@ const Navbar = () => {
             <li className={classes['list-item']}>
              <Link className={classes.link} to={'/'}> صفحه نخست</Link>
             </li>
-            <li className={classes['list-item']} to={'/shop'}>
-                <Link className={classes.link}>فروشگاه</Link>
+            <li className={classes['list-item']} >
+                <Link className={classes.link} to={'/shop'}>فروشگاه</Link>
             </li>
             <li className={classes['list-item']}>
                 <Link className={classes.link}to={'/cart'}>سبد خرید</Link>

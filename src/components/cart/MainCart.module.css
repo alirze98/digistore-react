@@ -17,7 +17,7 @@
   border-radius: 5px;
 }
 .title span {
-  margin-right: 010px;
+  margin-right: 10px;
 }
 .factor .items {
   margin: 20px 0px;
@@ -63,6 +63,7 @@
 }
 .factor .check button{
     width: 48%;
+    cursor: pointer;
 }
 .factor .check .check-out {
     display: flex;
