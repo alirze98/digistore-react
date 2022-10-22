@@ -50,7 +50,7 @@
 .login-register .cart {
   position: relative;
 }
-.cart-amoutn {
+.cart-amount {
   position: absolute;
   top: -10px;
   right: -7px;
@@ -64,6 +64,9 @@
   align-items: center;
   font-size: 12px;
 }
+.cart-amount.cart-amount-responsive {
+  font-size: 10px;
+}
 .nav-bottom .list {
   display: flex;
   list-style: none;
@@ -73,6 +76,10 @@
   margin-left: 30px;
   color: var(--main-gray);
   font-size: 0.8em;
+}
+.nav-bottom .list .list-item .link {
+  text-decoration: none;
+  color: inherit;
 }
 .nav-bottom .list .list-item:first-child {
   color: var(--main-blue);

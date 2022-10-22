@@ -19,7 +19,8 @@ const Navbar = () => {
   const totalItems = totalItemsArr.reduce((acc, cv) => {
     return acc + cv;
   }, 0);
-  const totalItemsContent = useChangeNumberToPersian(totalItems)
+  const totalItemsContent = useChangeNumberToPersian(totalItems);
+  
   return (
     <>
      <div className={classes['nav-top']}>
@@ -39,7 +40,7 @@ const Navbar = () => {
               <span>ورود / ثبت نام</span>
             </div>
            <div className={classes.cart}>
-           <span className={classes['cart-amoutn']}>{totalItemsContent}</span>
+           <span className={classes['cart-amount']}>{totalItemsContent}</span>
             <Link to={'/cart'}><img src={cartIcon} /></Link>
            </div>
           </Grid>
@@ -49,22 +50,22 @@ const Navbar = () => {
      <div className={classes['nav-bottom']}>
           <ul className={classes.list}>
             <li className={classes['list-item']}>
-              صفحه نخست
+             <Link className={classes.link} to={'/'}> صفحه نخست</Link>
+            </li>
+            <li className={classes['list-item']} to={'/shop'}>
+                <Link className={classes.link}>فروشگاه</Link>
             </li>
             <li className={classes['list-item']}>
-                فروشگاه
+                <Link className={classes.link}to={'/cart'}>سبد خرید</Link>
             </li>
             <li className={classes['list-item']}>
-                سبد خرید
+                <Link className={classes.link} to={'/blogs'}>بلاگ</Link>
             </li>
             <li className={classes['list-item']}>
-                بلاگ
+                <Link className={classes.link} to={'/'}>درباره ما</Link>
             </li>
             <li className={classes['list-item']}>
-                درباره ما
-            </li>
-            <li className={classes['list-item']}>
-                سورس کد
+                <a className={classes.link} href={'https://github.com/alirze98/digistore-react.git'}>سورس کد</a>
             </li>
           </ul>
      </div>
@@ -73,8 +74,10 @@ const Navbar = () => {
         <FaBars />
         <img src={logo} alt="" className={classes.logo} />
         <div className={classes['nav-responsive__cart']}>
-          <span>۰</span>
-          <img src={cartIcon} alt=""  />
+          <Link to={'/cart'}>
+          <span className={`${classes['cart-amount']} ${classes['cart-amount-responsive']}`}>{totalItemsContent}</span>
+          <img src={cartIcon} alt="cartIcon"  />
+          </Link>
         </div>
       </div>
     <nav className={classes['nav-responsive']}>
@@ -84,7 +87,7 @@ const Navbar = () => {
           <Grid item md={9} sm={9} xs={9}>
           <div className={classes['nav-responsive__search']}>
           <input type="text" placeholder="جستجو ..." />
-          <img src={searchIcon} alt="" />
+          <img src={searchIcon} alt="searchIcon" />
           </div>
           </Grid>
           <Grid item md={3} sm={3} xs={3} className={classes['nav-responsive__heart']}>
