@@ -4,7 +4,7 @@ import homeIcon from '../../assets/home.svg'
 import arrowIcon from '../../assets/aria-left.svg'
 import { Divider } from '@mui/material';
 
-const Filter = ({title,subTitle,info,subInfo,isInCart}) => {
+const Filter = ({title,subTitle,info,subInfo,isInCart,isInSingleProduct}) => {
   return (
     <>
        {!isInCart && <Divider className={`${classes.divider} ${classes["divider-top"]} ${isInCart ? classes.hidden : ''} `} />}
@@ -16,7 +16,7 @@ const Filter = ({title,subTitle,info,subInfo,isInCart}) => {
         </div>
         <h4 className={classes.title}>{subTitle}</h4>
       </div>
-      { !isInCart && <Divider className={`${classes.divider} ${classes["divider-bottom"]}`} />}
+      { !isInCart || !isInSingleProduct || <Divider className={`${classes.divider} ${classes["divider-bottom"]}`} />}
       <div className={classes["products-count"]}>
         <span className={classes["products-count__all"]}>{info}</span>
         <span className={classes["products-count__amount"]}>{subInfo}</span>
