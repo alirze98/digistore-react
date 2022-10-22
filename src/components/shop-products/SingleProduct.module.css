@@ -1,0 +1,33 @@
+.single-product {
+  display: flex;
+  padding: 0 75px;
+  font-size: 1em;
+}
+.single-product > image {
+}
+.single-product .left-side {
+}
+.left-side .title {
+  color: #2f3640;
+  font-size: 0.9em;
+  margin-bottom: 30px;
+}
+.left-side .price {
+  margin-bottom: 30px;
+}
+.left-side .actions {
+  display: flex;
+}
+.left-side .btns {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+  color: #747474;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+}
+.left-side .trash {
+  margin-right: 20px;
+}

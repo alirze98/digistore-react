@@ -11,6 +11,7 @@ import useChangeNumberToPersian from "../../hooks/use-change-number-to-persian.j
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import { checkActions } from "../../store/check-slice";
+import { Link } from "react-router-dom";
 
 const CarouselItem = (props) => {
   const dispatch = useDispatch();
@@ -46,7 +47,7 @@ const CarouselItem = (props) => {
     >
       <img src={props.image} alt="image" className={classes["phone-image"]} />
       <div>
-        <div className={classes.title}>{title}</div>
+        <Link to={`/shop/${props.id}`} className={classes.link}><div className={classes.title}>{title}</div></Link>
         <div className={classes.price}>{persianNumber}</div>
         <div
           className={`${classes.actions} ${

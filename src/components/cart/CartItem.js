@@ -7,6 +7,7 @@ import useChangeNumberToPersian from '../../hooks/use-change-number-to-persian';
 import {  useDispatch,useSelector } from "react-redux";
 import { cartActions } from '../../store/cart-slice';
 
+
 const CartItem = (props) => {
     const dispatch = useDispatch()
     const title = `${props.title.substr(0,65)}...`

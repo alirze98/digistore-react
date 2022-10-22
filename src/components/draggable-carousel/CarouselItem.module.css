@@ -12,6 +12,9 @@
   height: 150px;
   margin-bottom: 23px;
 }
+.carousel-item .link{
+  text-decoration: none;
+}
 .carousel-item .title {
   color: #6c6c6c;
   font-size: 0.8em;
