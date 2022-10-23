@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Blogs from './pages/Blogs'
 import SingleProduct from './components/shop-products/SingleProduct';
+import SingleBlogs from './components/main-blogs/SingleBlogs';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path='/shop/:productId' element={<SingleProduct />} />
       <Route path='/cart' element={<Cart />} />
       <Route path='/blogs' element={<Blogs />} />
+      <Route path='/blogs/:blogId' element={<SingleBlogs />} />
     </Routes>
     </>
   );

@@ -11,6 +11,9 @@
   border-radius: 5px;
   margin-bottom: 15px;
 }
+.blogs-carousel-item .link{
+  text-decoration: none;
+}
 .blogs-carousel-item .title {
   flex-grow: 2;
   margin-bottom: 10px;

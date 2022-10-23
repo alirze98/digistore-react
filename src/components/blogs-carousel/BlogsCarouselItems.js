@@ -19,6 +19,7 @@ const BlogsCarouselItems = (props) => {
             desc={item.body}
             like={item.like}
             view={item.views}
+            id={item.id}
           />
           </SwiperSlide>
         );

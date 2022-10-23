@@ -18,6 +18,7 @@ const BlogsCarousel = () => {
       .then((response) => {
         setBlogsItems(response.data);
         setIsLoading(false);
+        
       })
       .catch((error) => {
         setErrors(true);

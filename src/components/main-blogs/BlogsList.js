@@ -13,6 +13,7 @@ const BlogsList = (props) => {
           view={item.view}
           like={item.like}
           isInBlogsPage={true}
+          id={item.id}
         />
       </Grid>
     );
