@@ -1,0 +1,34 @@
+.sidebar{
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 70%;
+    height: 100vh;
+    padding: 20px;
+    padding-top: 20px;
+    font-size: 1em;
+    z-index: 20000;
+}
+.sidebar > img{
+width: 100px;
+margin-bottom: 20px;
+}
+.sidebar .divider{
+    margin-bottom: 20px;
+}
+.sidebar .list {
+    list-style: none;
+}
+.sidebar .list .item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    color:#42474e;
+    font-size: .9em;
+}
+.sidebar .list .item img{
+    margin-left: 15px;
+    width: 20px;
+    
+    
+}

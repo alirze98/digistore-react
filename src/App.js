@@ -6,10 +6,13 @@ import Shop from './pages/Shop';
 import Blogs from './pages/Blogs'
 import SingleProduct from './components/shop-products/SingleProduct';
 import SingleBlogs from './components/main-blogs/SingleBlogs';
+import Sidebar from './components/common/Sidebar';
+
 
 function App() {
   return (
     <>
+    <Sidebar />
     <Navbar />
     <Routes>
       <Route path='/' element={<Home />} />
