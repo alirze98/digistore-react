@@ -28,7 +28,7 @@ const BlogsCarouselItem = (props) => {
                     <img src={heartIcon} alt="icon" />
                 </div>
                 <div className={classes['actions-read-more']}>
-                    <div>ادامه مطلب</div>
+                    <Link to={`/blogs/${props.id}`} className={classes.link}><div>ادامه مطلب</div></Link>
                     <img src={arrowIcon} alt="arrowIcon" />
                 </div>
             </div>

@@ -87,6 +87,10 @@
   color: #0089ff;
   border-radius: 5px;
 }
+.actions .actions-read-more .link{
+  color: inherit;
+  text-decoration: none;
+}
 
 .actions .actions-read-more img {
   margin-right: 5px;
