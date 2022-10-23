@@ -48,7 +48,7 @@ const SingleProduct = () => {
   };
   return (
     <>
-      <div className={classes.container}>
+      {!error && <div className={classes.container}>
         <Filter title={"خانه/ محصولات / گوشی موبایل"} isInSingleProduct={true} />
         <div className={classes["single-product"]}>
           <img src={data ? data.image : ""} alt="Phone image" />
@@ -92,7 +92,8 @@ const SingleProduct = () => {
           سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
         </div>
         <Footer />
-      </div>
+      </div>}
+      {error && <div className={classes.error}>something went wrong :(</div>}
     </>
   );
 };
