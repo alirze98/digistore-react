@@ -12,14 +12,20 @@ import heartIcon from "../../assets/heart.svg"
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import useChangeNumberToPersian from "../../hooks/use-change-number-to-persian";
+import { sidebarActions } from "../../store/sidebar-slice";
+import { useDispatch } from "react-redux";
 
 const Navbar = () => {
+  const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart.cart);
   const totalItemsArr = cart.map((item) => item.count);
   const totalItems = totalItemsArr.reduce((acc, cv) => {
     return acc + cv;
   }, 0);
   const totalItemsContent = useChangeNumberToPersian(totalItems);
+  const barsClickHandler = () => {
+    dispatch(sidebarActions.toggleSidebar())
+  }
   
   return (
     <>
@@ -71,7 +77,7 @@ const Navbar = () => {
      </div>
     </nav>
       <div className={classes['nav-responsive__top']}>
-        <FaBars />
+        <button className={classes['bars-btn']} onClick={barsClickHandler}><FaBars /></button>
         <img src={logo} alt="" className={classes.logo} />
         <div className={classes['nav-responsive__cart']}>
           <Link to={'/cart'}>

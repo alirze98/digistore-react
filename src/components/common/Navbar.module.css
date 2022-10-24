@@ -95,6 +95,11 @@
   padding: 10px;
   display: none;
 }
+.nav-responsive__top .bars-btn{
+  background:none;
+  border: none;
+  cursor: pointer;
+}
 .nav-responsive__top .logo {
   width: 92px;
   height: 22px;
