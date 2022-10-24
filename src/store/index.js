@@ -4,11 +4,11 @@ import checkSlice from "./check-slice";
 import sidebarSlice from "./sidebar-slice";
 
 const store = configureStore({
-    reducer:{
-        cart:cartSlice.reducer,
-        check:checkSlice.reducer,
-        sidebar:sidebarSlice.reducer
-    }
-})
+  reducer: {
+    cart: cartSlice.reducer,
+    check: checkSlice.reducer,
+    sidebar: sidebarSlice.reducer,
+  },
+});
 
 export default store;

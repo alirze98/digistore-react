@@ -13,7 +13,7 @@ import listIcon from "../../assets/list.svg";
 import checkOutIcon from "../../assets/checkout-cart.svg";
 
 const MainCart = (props) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
   const totalItemsArr = cart.map((item) => item.count);
   const totalItems = totalItemsArr.reduce((acc, cv) => {
@@ -44,8 +44,8 @@ const MainCart = (props) => {
     props.onEmptyCart();
   };
   const removeAllItemBtnHandler = () => {
-    dispatch(cartActions.removeAllItems())
-  }
+    dispatch(cartActions.removeAllItems());
+  };
 
   return (
     <div className={classes["main-cart"]}>
@@ -92,7 +92,12 @@ const MainCart = (props) => {
                 <img src={checkOutIcon} alt="icon" />
                 <span>تسویه حساب</span>
               </button>
-              <button className={classes.remove} onClick={removeAllItemBtnHandler}>حذف همه</button>
+              <button
+                className={classes.remove}
+                onClick={removeAllItemBtnHandler}
+              >
+                حذف همه
+              </button>
             </div>
           </div>
         </Grid>

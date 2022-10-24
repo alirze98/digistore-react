@@ -34,37 +34,34 @@
 .centered-logo {
   width: 100px;
 }
-@media(max-width:1200px){
-    .footer {
-        padding: 0 50px;
-      }
-    .right-logo-container{
-        margin: 0 auto !important;
-        margin-bottom: 50px !important;
-    }
-    .title-container{
-        width: 100%;
-        text-align: center;
-    }
+@media (max-width: 1200px) {
+  .footer {
+    padding: 0 50px;
+  }
+  .right-logo-container {
+    margin: 0 auto !important;
+    margin-bottom: 50px !important;
+  }
+  .title-container {
+    width: 100%;
+    text-align: center;
+  }
 }
-@media(max-width:992px){
-    .footer {
-        padding: 0 10px;
-      }
-      .desc{
-        text-align: justify;
-      }
+@media (max-width: 992px) {
+  .footer {
+    padding: 0 10px;
+  }
+  .desc {
+    text-align: justify;
+  }
 }
-@media(max-width:768px){
-   
+@media (max-width: 768px) {
 }
-@media(max-width:576px){
-    .title{
-        font-size: .9em;
-    }
-    .right-logo{
-        width: 150px;
-    }
-   
+@media (max-width: 576px) {
+  .title {
+    font-size: 0.9em;
+  }
+  .right-logo {
+    width: 150px;
+  }
 }
-

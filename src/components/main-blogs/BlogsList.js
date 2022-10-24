@@ -20,7 +20,7 @@ const BlogsList = (props) => {
   });
   return (
     <Grid container columns={{ xl: 6, lg: 5, md: 4, sm: 2, xs: 1 }}>
-        {content}
+      {content}
     </Grid>
   );
 };

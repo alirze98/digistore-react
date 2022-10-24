@@ -4,11 +4,11 @@ import classes from "./Navbar.module.css";
 import logo from "../../assets/logo.svg";
 import searchIcon from "../../assets/search.svg";
 import userIcon from "../../assets/user.svg";
-import cartIcon from "../../assets/cart.svg"
+import cartIcon from "../../assets/cart.svg";
 import { Grid } from "@mui/material";
-import Divider from '@mui/material/Divider';
+import Divider from "@mui/material/Divider";
 import { FaBars } from "react-icons/fa";
-import heartIcon from "../../assets/heart.svg"
+import heartIcon from "../../assets/heart.svg";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import useChangeNumberToPersian from "../../hooks/use-change-number-to-persian";
@@ -16,7 +16,7 @@ import { sidebarActions } from "../../store/sidebar-slice";
 import { useDispatch } from "react-redux";
 
 const Navbar = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
   const totalItemsArr = cart.map((item) => item.count);
   const totalItems = totalItemsArr.reduce((acc, cv) => {
@@ -24,87 +24,125 @@ const Navbar = () => {
   }, 0);
   const totalItemsContent = useChangeNumberToPersian(totalItems);
   const barsClickHandler = () => {
-    dispatch(sidebarActions.toggleSidebar())
-  }
-  
+    dispatch(sidebarActions.toggleSidebar());
+  };
+
   return (
     <>
-     <div className={classes['nav-top']}>
-        <Grid container className={classes['nav-top-container']}>
+      <div className={classes["nav-top"]}>
+        <Grid container className={classes["nav-top-container"]}>
           <Grid item lg={3.5} md={3.5} sm={3.5} xs={3.5}>
-            <img src={logo} className={classes.logo} alt='Logo' />
+            <img src={logo} className={classes.logo} alt="Logo" />
           </Grid>
           <Grid item lg={5} md={5} sm={5} xs={5}>
             <div className={classes.search}>
-              <input className={classes.input} placeholder='جستجو ...' />
-              <img src={searchIcon} alt='Search icon' />
+              <input className={classes.input} placeholder="جستجو ..." />
+              <img src={searchIcon} alt="Search icon" />
             </div>
           </Grid>
-          <Grid item lg={3.5} md={3.5} sm={3.5} xs={3.5} className={classes['login-register']}>
-            <div className={classes['login-register__btn']}>
-              <img src={userIcon} alt='User icon'/>
+          <Grid
+            item
+            lg={3.5}
+            md={3.5}
+            sm={3.5}
+            xs={3.5}
+            className={classes["login-register"]}
+          >
+            <div className={classes["login-register__btn"]}>
+              <img src={userIcon} alt="User icon" />
               <span>ورود / ثبت نام</span>
             </div>
-           <div className={classes.cart}>
-           <span className={classes['cart-amount']}>{totalItemsContent}</span>
-            <Link to={'/cart'}><img src={cartIcon} alt='Cart icon' /></Link>
-           </div>
+            <div className={classes.cart}>
+              <span className={classes["cart-amount"]}>
+                {totalItemsContent}
+              </span>
+              <Link to={"/cart"}>
+                <img src={cartIcon} alt="Cart icon" />
+              </Link>
+            </div>
           </Grid>
         </Grid>
-     </div>
-    <nav className={classes.nav}>
-     <div className={classes['nav-bottom']}>
+      </div>
+      <nav className={classes.nav}>
+        <div className={classes["nav-bottom"]}>
           <ul className={classes.list}>
-            <li className={classes['list-item']}>
-             <Link className={classes.link} to={'/'}> صفحه نخست</Link>
+            <li className={classes["list-item"]}>
+              <Link className={classes.link} to={"/"}>
+                {" "}
+                صفحه نخست
+              </Link>
             </li>
-            <li className={classes['list-item']} >
-                <Link className={classes.link} to={'/shop'}>فروشگاه</Link>
+            <li className={classes["list-item"]}>
+              <Link className={classes.link} to={"/shop"}>
+                فروشگاه
+              </Link>
             </li>
-            <li className={classes['list-item']}>
-                <Link className={classes.link}to={'/cart'}>سبد خرید</Link>
+            <li className={classes["list-item"]}>
+              <Link className={classes.link} to={"/cart"}>
+                سبد خرید
+              </Link>
             </li>
-            <li className={classes['list-item']}>
-                <Link className={classes.link} to={'/blogs'}>بلاگ</Link>
+            <li className={classes["list-item"]}>
+              <Link className={classes.link} to={"/blogs"}>
+                بلاگ
+              </Link>
             </li>
-            <li className={classes['list-item']}>
-                <Link className={classes.link} to={'/'}>درباره ما</Link>
+            <li className={classes["list-item"]}>
+              <Link className={classes.link} to={"/"}>
+                درباره ما
+              </Link>
             </li>
-            <li className={classes['list-item']}>
-                <a className={classes.link} href={'https://github.com/alirze98/digistore-react.git'}>سورس کد</a>
+            <li className={classes["list-item"]}>
+              <a
+                className={classes.link}
+                href={"https://github.com/alirze98/digistore-react.git"}
+              >
+                سورس کد
+              </a>
             </li>
           </ul>
-     </div>
-    </nav>
-      <div className={classes['nav-responsive__top']}>
-        <button className={classes['bars-btn']} onClick={barsClickHandler}><FaBars /></button>
+        </div>
+      </nav>
+      <div className={classes["nav-responsive__top"]}>
+        <button className={classes["bars-btn"]} onClick={barsClickHandler}>
+          <FaBars />
+        </button>
         <img src={logo} alt="" className={classes.logo} />
-        <div className={classes['nav-responsive__cart']}>
-          <Link to={'/cart'}>
-          <span className={`${classes['cart-amount']} ${classes['cart-amount-responsive']}`}>{totalItemsContent}</span>
-          <img src={cartIcon} alt="cartIcon"  />
+        <div className={classes["nav-responsive__cart"]}>
+          <Link to={"/cart"}>
+            <span
+              className={`${classes["cart-amount"]} ${classes["cart-amount-responsive"]}`}
+            >
+              {totalItemsContent}
+            </span>
+            <img src={cartIcon} alt="cartIcon" />
           </Link>
         </div>
       </div>
-    <nav className={classes['nav-responsive']}>
-      <Divider />
-      <div className={classes['nav-responsive__bottom']}>
-        <Grid container spacing={{md:10,sm:5,xs:3}}>
-          <Grid item md={9} sm={9} xs={9}>
-          <div className={classes['nav-responsive__search']}>
-          <input type="text" placeholder="جستجو ..." />
-          <img src={searchIcon} alt="searchIcon" />
-          </div>
+      <nav className={classes["nav-responsive"]}>
+        <Divider />
+        <div className={classes["nav-responsive__bottom"]}>
+          <Grid container spacing={{ md: 10, sm: 5, xs: 3 }}>
+            <Grid item md={9} sm={9} xs={9}>
+              <div className={classes["nav-responsive__search"]}>
+                <input type="text" placeholder="جستجو ..." />
+                <img src={searchIcon} alt="searchIcon" />
+              </div>
+            </Grid>
+            <Grid
+              item
+              md={3}
+              sm={3}
+              xs={3}
+              className={classes["nav-responsive__heart"]}
+            >
+              <img src={heartIcon} alt="" />
+              <button>ورود</button>
+            </Grid>
           </Grid>
-          <Grid item md={3} sm={3} xs={3} className={classes['nav-responsive__heart']}>
-           <img src={heartIcon} alt="" />
-            <button>ورود</button>
-          </Grid>
-        </Grid>
-      </div>
-      <Divider />
-    
-    </nav>
+        </div>
+        <Divider />
+      </nav>
     </>
   );
 };

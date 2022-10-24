@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
-import { Pagination, Autoplay, Navigation} from "swiper";
+import { Pagination, Autoplay, Navigation } from "swiper";
 // images
 import banner2 from "../../assets/banner2.jpg";
 import banner3 from "../../assets/banner3.jpg";
@@ -16,12 +16,18 @@ import creditcardIcon from "../../assets/credit-card.svg";
 import classes from "./Slider.module.css";
 
 const Slider = () => {
-  const banners = [banner2,banner3,banner4];
-  const swiperContent = banners.map((banner,index) =>{
-    return <SwiperSlide className={classes["slider-item"]} key={index}>
-      <img src={banner} alt="banner" className={classes['slider-item__image']} />
-    </SwiperSlide>
-  })
+  const banners = [banner2, banner3, banner4];
+  const swiperContent = banners.map((banner, index) => {
+    return (
+      <SwiperSlide className={classes["slider-item"]} key={index}>
+        <img
+          src={banner}
+          alt="banner"
+          className={classes["slider-item__image"]}
+        />
+      </SwiperSlide>
+    );
+  });
   return (
     <>
       <div className={classes["swiper-container"]}>
@@ -48,7 +54,11 @@ const Slider = () => {
         <div className={classes.access}>
           <div className={classes["access-item"]}>
             <div className={classes.logo}>
-              <img src={truckIcon} alt="truckIcon" className={classes["logo-image"]} />
+              <img
+                src={truckIcon}
+                alt="truckIcon"
+                className={classes["logo-image"]}
+              />
             </div>
             <div>
               <div className={classes.title}>حمل و نقل سریع</div>
@@ -59,24 +69,28 @@ const Slider = () => {
           </div>
           <div className={classes["access-item"]}>
             <div className={`${classes.logo} ${classes.purpleColor}`}>
-              <img src={supportIcon} alt="supportIcon" className={classes["logo-image"]} />
+              <img
+                src={supportIcon}
+                alt="supportIcon"
+                className={classes["logo-image"]}
+              />
             </div>
             <div>
               <div className={classes.title}>پشتیبانی 24 ساعته</div>
-              <div className={classes.desc}>
-              در هر زمان پشتیبان شما هستیم
-              </div>
+              <div className={classes.desc}>در هر زمان پشتیبان شما هستیم</div>
             </div>
           </div>
           <div className={classes["access-item"]}>
             <div className={`${classes.logo} ${classes.blueColor}`}>
-              <img src={creditcardIcon} alt="creditCardIcon" className={classes["logo-image"]} />
+              <img
+                src={creditcardIcon}
+                alt="creditCardIcon"
+                className={classes["logo-image"]}
+              />
             </div>
             <div>
               <div className={classes.title}>پرداخت آسان</div>
-              <div className={classes.desc}>
-                امکان پرداخت حضوری در محل
-              </div>
+              <div className={classes.desc}>امکان پرداخت حضوری در محل</div>
             </div>
           </div>
           <div className={classes["access-item"]}>

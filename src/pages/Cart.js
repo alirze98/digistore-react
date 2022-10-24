@@ -7,18 +7,20 @@ import { checkActions } from "../store/check-slice";
 import EmptyCart from "../components/cart/EmptyCart";
 
 const Cart = () => {
-  const isChecked = useSelector(state =>state.check.check);
-  const cart = useSelector(state => state.cart.cart)
+  const isChecked = useSelector((state) => state.check.check);
+  const cart = useSelector((state) => state.cart.cart);
   const dispatch = useDispatch();
   const emptyCartHandler = () => {
-    dispatch(checkActions.checked())
+    dispatch(checkActions.checked());
     dispatch(cartActions.removeAllItems());
   };
 
   return (
     <>
       {!isChecked && cart.length === 0 && <EmptyCart />}
-      {!isChecked && cart.length !== 0 && <MainCart onEmptyCart={emptyCartHandler} />}
+      {!isChecked && cart.length !== 0 && (
+        <MainCart onEmptyCart={emptyCartHandler} />
+      )}
       {isChecked && cart.length === 0 && <Checked />}
     </>
   );

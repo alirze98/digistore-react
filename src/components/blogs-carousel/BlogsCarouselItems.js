@@ -8,41 +8,41 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import BlogsCarouselItem from "./BlogsCarouselItem";
 
-
 const BlogsCarouselItems = (props) => {
-    const items = props.data.map((item) => {
-        return (
-            <SwiperSlide key={item.id}>
-          <BlogsCarouselItem
-            image={item.image}
-            title={item.title}
-            desc={item.body}
-            like={item.like}
-            view={item.views}
-            id={item.id}
-          />
-          </SwiperSlide>
-        );
-      })
+  const items = props.data.map((item) => {
+    return (
+      <SwiperSlide key={item.id}>
+        <BlogsCarouselItem
+          image={item.image}
+          title={item.title}
+          desc={item.body}
+          like={item.like}
+          view={item.views}
+          id={item.id}
+        />
+      </SwiperSlide>
+    );
+  });
   return (
     <div>
-      <Swiper slidesPerView={6}  modules={[Pagination]} className="mySwiper"
-      breakpoints={{
-        1200:{
-          slidesPerView: 5,
-        },
-        768:{
-          slidesPerView: 3,
-        },
-        576: {
-          slidesPerView: 2,
-        },
-        100: {
-          slidesPerView: 1,
-        },
-        
-      }}
-    
+      <Swiper
+        slidesPerView={6}
+        modules={[Pagination]}
+        className="mySwiper"
+        breakpoints={{
+          1200: {
+            slidesPerView: 5,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          576: {
+            slidesPerView: 2,
+          },
+          100: {
+            slidesPerView: 1,
+          },
+        }}
       >
         {items}
       </Swiper>

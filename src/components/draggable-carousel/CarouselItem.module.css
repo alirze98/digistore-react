@@ -4,7 +4,7 @@
   text-align: center;
   box-shadow: 0 0 7px -5px #5a5a5a;
 }
-.carousel-item.shopItem{
+.carousel-item.shopItem {
   margin-bottom: 10px;
 }
 .carousel-item .phone-image {
@@ -12,7 +12,7 @@
   height: 150px;
   margin-bottom: 23px;
 }
-.carousel-item .link{
+.carousel-item .link {
   text-decoration: none;
 }
 .carousel-item .title {
@@ -37,20 +37,20 @@
   align-items: center;
   color: #d1d1d1;
 }
-.carousel-item.shopItem .actions .btns .count{
-  font-size: .9em;
+.carousel-item.shopItem .actions .btns .count {
+  font-size: 0.9em;
 }
-.carousel-item .actions  .button{
+.carousel-item .actions .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background:none;
+  background: none;
   border: none;
   cursor: pointer;
   padding: 0;
   margin: 0;
 }
-.carousel-item .actions .btns.shopItem{
+.carousel-item .actions .btns.shopItem {
   width: 45%;
 }
 .btns .plus-icon {
@@ -68,79 +68,75 @@
   width: 25px;
   height: 35px;
 }
-.actions.shopItem .heart-icon{
-width: 20px;
+.actions.shopItem .heart-icon {
+  width: 20px;
 }
-
 
 @media (max-width: 992px) {
-    .carousel-item .phone-image {
-        width:135px ;
-        height:135px ;
-    }
-    .carousel-item .title{
-        margin-bottom: 25px;
-    }
+  .carousel-item .phone-image {
+    width: 135px;
+    height: 135px;
+  }
+  .carousel-item .title {
+    margin-bottom: 25px;
+  }
 }
 @media (max-width: 768px) {
-    .carousel-item .phone-image {
-        width:120px ;
-        height:120px ;
-    }
-}
-@media (max-width:600px){
-  .carousel-item.shopItem{
-   display: flex;
-   text-align: start;
-   box-shadow: none;
-   border-bottom: 1px solid rgb(236, 233, 233);
+  .carousel-item .phone-image {
+    width: 120px;
+    height: 120px;
   }
-  .carousel-item.shopItem .phone-image{
+}
+@media (max-width: 600px) {
+  .carousel-item.shopItem {
+    display: flex;
+    text-align: start;
+    box-shadow: none;
+    border-bottom: 1px solid rgb(236, 233, 233);
+  }
+  .carousel-item.shopItem .phone-image {
     width: 140px;
     height: 140px;
   }
-  .carousel-item.shopItem  .title{
+  .carousel-item.shopItem .title {
     margin-right: 20px;
-    
   }
-  .carousel-item.shopItem  .price{
+  .carousel-item.shopItem .price {
     margin-right: 20px;
-   
   }
   .carousel-item.shopItem .actions {
     justify-content: space-around;
   }
-  .carousel-item.shopItem .actions .btns{
+  .carousel-item.shopItem .actions .btns {
     width: 40%;
     justify-content: space-around;
   }
-  
 }
 @media (max-width: 460px) {
-    .carousel-item .phone-image {
-        width:100px ;
-        height:100px ;
-    }
-    .carousel-item .title{
-        margin-bottom: 20px;
-    }
+  .carousel-item .phone-image {
+    width: 100px;
+    height: 100px;
+  }
+  .carousel-item .title {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 400px) {
-    .carousel-item .phone-image {
-        width:110px ;
-        height:110px ;
-    }
-    .carousel-item .actions {
-        align-items: center;
-      }
-    .carousel-item .title{
-        margin-bottom: 20px;
-    }
-    .actions .heart-icon {
-        width: 20px;
-        height: 30px;
-      }
-      .carousel-item .actions .btns{
-        padding: 2px 7px;
-      }
+  .carousel-item .phone-image {
+    width: 110px;
+    height: 110px;
+  }
+  .carousel-item .actions {
+    align-items: center;
+  }
+  .carousel-item .title {
+    margin-bottom: 20px;
+  }
+  .actions .heart-icon {
+    width: 20px;
+    height: 30px;
+  }
+  .carousel-item .actions .btns {
+    padding: 2px 7px;
+  }
 }

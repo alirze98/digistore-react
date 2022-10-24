@@ -23,23 +23,24 @@ const CarouselItems = (props) => {
   });
   return (
     <div>
-      <Swiper slidesPerView={6}  modules={[Pagination]} className="mySwiper"
-      breakpoints={{
-        1200:{
-          slidesPerView: 6,
-        },
-        768:{
-          slidesPerView: 4,
-        },
-        576: {
-          slidesPerView: 3,
-        },
-        100: {
-          slidesPerView: 2,
-        },
-        
-      }}
-    
+      <Swiper
+        slidesPerView={6}
+        modules={[Pagination]}
+        className="mySwiper"
+        breakpoints={{
+          1200: {
+            slidesPerView: 6,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+          576: {
+            slidesPerView: 3,
+          },
+          100: {
+            slidesPerView: 2,
+          },
+        }}
       >
         {items}
       </Swiper>

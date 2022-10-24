@@ -17,9 +17,9 @@ const CarouselItem = (props) => {
   const dispatch = useDispatch();
   const title = `${props.title.substr(0, 45)}...`;
   const persianNumber = useChangeNumberToPersian(props.price.toLocaleString());
-  const cartArr = useSelector(state => state.cart.cart);
-  const itemInCart = cartArr.find(item => item.id === props.id);
-  
+  const cartArr = useSelector((state) => state.cart.cart);
+  const itemInCart = cartArr.find((item) => item.id === props.id);
+
   const incrementBtnHandler = () => {
     dispatch(
       cartActions.incrementItem({
@@ -30,8 +30,7 @@ const CarouselItem = (props) => {
         id: props.id,
       })
     );
-    dispatch(checkActions.unChecked())
-  
+    dispatch(checkActions.unChecked());
   };
   const decrementBtnHandler = () => {
     dispatch(cartActions.decrementItem(props.id));
@@ -47,7 +46,9 @@ const CarouselItem = (props) => {
     >
       <img src={props.image} alt="image" className={classes["phone-image"]} />
       <div>
-        <Link to={`/shop/${props.id}`} className={classes.link}><div className={classes.title}>{title}</div></Link>
+        <Link to={`/shop/${props.id}`} className={classes.link}>
+          <div className={classes.title}>{title}</div>
+        </Link>
         <div className={classes.price}>{persianNumber}</div>
         <div
           className={`${classes.actions} ${
@@ -62,7 +63,9 @@ const CarouselItem = (props) => {
             <button className={classes.button} onClick={incrementBtnHandler}>
               <img src={plusIcon} alt="icon" className={classes["plus-icon"]} />
             </button>
-            <span className={classes.count}>{itemInCart? itemInCart.count: 0}</span>
+            <span className={classes.count}>
+              {itemInCart ? itemInCart.count : 0}
+            </span>
             <button className={classes.button} onClick={decrementBtnHandler}>
               {" "}
               <img

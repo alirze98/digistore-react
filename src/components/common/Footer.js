@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <div className={classes.footer}>
       <Grid container>
-        <Grid item lg={3} className={classes['right-logo-container']}>
-          <img src={logo} alt="logo" className={classes['right-logo']} />
+        <Grid item lg={3} className={classes["right-logo-container"]}>
+          <img src={logo} alt="logo" className={classes["right-logo"]} />
         </Grid>
         <Grid item lg={9}>
-          <div className={classes['title-container']}>
-          <h3 className={classes.title}>فروشگاه اینترنتی دیجی استور</h3>
+          <div className={classes["title-container"]}>
+            <h3 className={classes.title}>فروشگاه اینترنتی دیجی استور</h3>
           </div>
           <p className={classes.desc}>
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
@@ -29,9 +29,9 @@ const Footer = () => {
           </p>
         </Grid>
       </Grid>
-        <div className={classes['centered-logo-container']}>
-        <img src={logo} alt="logo" className={classes['centered-logo']} />
-        </div>
+      <div className={classes["centered-logo-container"]}>
+        <img src={logo} alt="logo" className={classes["centered-logo"]} />
+      </div>
     </div>
   );
 };

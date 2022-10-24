@@ -1,131 +1,127 @@
-.swiper-container{
-    padding:  0 75px;
-    font-size: 1em;
-    margin-bottom: 40px;
+.swiper-container {
+  padding: 0 75px;
+  font-size: 1em;
+  margin-bottom: 40px;
 }
-.slider-item{
-    width: 100%;
-   
+.slider-item {
+  width: 100%;
 }
-.slider-item__image{
-    width: 100%;
-    height: 344px;
-    border-radius: 5px;
+.slider-item__image {
+  width: 100%;
+  height: 344px;
+  border-radius: 5px;
 }
 /* access section */
-.access{
- display: flex;
- justify-content: space-between;
- flex-wrap: wrap;
- margin-top: 10px;
- padding: 0 5px;
+.access {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 0 5px;
 }
-.access .access-item{
-display: flex;
-align-items: center;
-background-color: #f9f9f9;
-width: 24%;
-padding: 10px ;
+.access .access-item {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  width: 24%;
+  padding: 10px;
+}
+.access-item .logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  background-color: rgb(251, 237, 183);
+  border-radius: 5px;
+}
+.access-item .logo.purpleColor {
+  background-color: rgb(221, 199, 230);
+}
+.access .logo.blueColor {
+  background-color: rgb(179, 220, 255);
+}
+.access .logo.lightBlueColor {
+  background-color: #efefef;
+}
+.access-item .title {
+  font-size: 0.9em;
+  color: #2f3640;
+  margin-bottom: 5px;
+}
+.access-item .desc {
+  font-size: 0.8em;
+  color: #7f8c8d;
+}
 
-}
-.access-item .logo{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-    background-color:rgb(251, 237, 183);
-    border-radius: 5px;
-}
-.access-item .logo.purpleColor{
-    background-color:rgb(221, 199, 230); ;
-}
-.access .logo.blueColor{
-    background-color: rgb(179, 220, 255);
-}
-.access .logo.lightBlueColor{
-    background-color: #efefef;
-}
-.access-item .title{
-font-size: .9em;
-color: #2f3640;
-margin-bottom: 5px;
-}
-.access-item .desc{
-font-size: .8em;
-color: #7f8c8d;
-}
-
-@media (max-width:1200px){
-    .access-item{
-        margin-bottom: 10px;
-    }
-    .access-item .title{
-        font-size: .7em;
-    }
-    .access-item .desc{
-        font-size: .6em;
-    }
-    .slider-item__image{
-        height:324px ;
-    }
-    .access .access-item .logo{
-    width: 40px ;
+@media (max-width: 1200px) {
+  .access-item {
+    margin-bottom: 10px;
+  }
+  .access-item .title {
+    font-size: 0.7em;
+  }
+  .access-item .desc {
+    font-size: 0.6em;
+  }
+  .slider-item__image {
+    height: 324px;
+  }
+  .access .access-item .logo {
+    width: 40px;
     height: 40px;
-    }
-    .access .access-item .logo-image{
-        width: 20px;
-    }
-    
+  }
+  .access .access-item .logo-image {
+    width: 20px;
+  }
 }
-@media (max-width:992px){
-    .swiper-container{
-        padding: 0 10px;
-    }
-   .access .access-item{
+@media (max-width: 992px) {
+  .swiper-container {
+    padding: 0 10px;
+  }
+  .access .access-item {
     width: 32%;
     margin-bottom: 10px;
-   }
-   .slider-item__image{
-    height:286px ;
+  }
+  .slider-item__image {
+    height: 286px;
+  }
 }
+@media (max-width: 768px) {
+  .slider-item__image {
+    height: 217px;
+  }
+  .access .access-item {
+    width: 49%;
+    margin-bottom: 10px;
+    align-items: center;
+  }
 }
-@media (max-width:768px){
-    .slider-item__image{
-        height:217px ;
-    }
-    .access .access-item{
-        width: 49%;
-        margin-bottom: 10px;
-        align-items: center;
-       }
-}
-@media (max-width:576px){
-   .access .access-item{
+@media (max-width: 576px) {
+  .access .access-item {
     width: 48%;
-   }
-   .slider-item__image{
-    height:162px ;
-}
-.swiper-container{
+  }
+  .slider-item__image {
+    height: 162px;
+  }
+  .swiper-container {
     margin-bottom: 0;
+  }
 }
-
+@media (max-width: 460px) {
+  .slider-item__image {
+    height: 130px;
+  }
+  .access .access-item .logo {
+    padding: 10px;
+  }
 }
-@media (max-width:460px){
-    .slider-item__image{
-        height:130px ;
-    }
-    .access .access-item .logo{
-        padding: 10px;
-    }
-}
-@media (max-width:400px){
-    .slider-item__image{
-        height:120px ;
-    }
-    .access .access-item .logo{
-        padding: 10px;
-    }
+@media (max-width: 400px) {
+  .slider-item__image {
+    height: 120px;
+  }
+  .access .access-item .logo {
+    padding: 10px;
+  }
 }
