@@ -1,6 +1,5 @@
 import React from "react";
 import CarouselItem from "./CarouselItem";
-import classes from "./CarouselItems.module.css";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -11,7 +10,7 @@ import { Pagination } from "swiper";
 const CarouselItems = (props) => {
   const items = props.data.map((item) => {
     return (
-      <SwiperSlide>
+      <SwiperSlide key={item.id}>
         <CarouselItem
           title={item.title}
           price={item.price}

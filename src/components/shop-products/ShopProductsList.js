@@ -5,7 +5,7 @@ import CarouselItem from "../draggable-carousel/CarouselItem";
 const ShopProductsList = (props) => {
   const content = props.data.map((item) => {
     return (
-      <Grid item xl={1} lg={1} md={1} sm={1} xs={1}>
+      <Grid item xl={1} lg={1} md={1} sm={1} xs={1} key={item.id}>
         <CarouselItem
           image={item.image}
           title={item.title}

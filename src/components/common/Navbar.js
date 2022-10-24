@@ -32,7 +32,7 @@ const Navbar = () => {
      <div className={classes['nav-top']}>
         <Grid container className={classes['nav-top-container']}>
           <Grid item lg={3.5} md={3.5} sm={3.5} xs={3.5}>
-            <img src={logo} className={classes.logo} alt='Logo image' />
+            <img src={logo} className={classes.logo} alt='Logo' />
           </Grid>
           <Grid item lg={5} md={5} sm={5} xs={5}>
             <div className={classes.search}>

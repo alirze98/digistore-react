@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import classes from "./MainCart.module.css";
@@ -15,7 +15,6 @@ import checkOutIcon from "../../assets/checkout-cart.svg";
 const MainCart = (props) => {
   const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart.cart);
-  const item = cart.find((item) => item.id === props.id);
   const totalItemsArr = cart.map((item) => item.count);
   const totalItems = totalItemsArr.reduce((acc, cv) => {
     return acc + cv;
@@ -35,6 +34,7 @@ const MainCart = (props) => {
         price={item.price}
         count={item.count}
         id={item.id}
+        key={item.id}
       />
     );
   });

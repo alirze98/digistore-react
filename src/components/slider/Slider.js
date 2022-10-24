@@ -17,8 +17,8 @@ import classes from "./Slider.module.css";
 
 const Slider = () => {
   const banners = [banner2,banner3,banner4];
-  const swiperContent = banners.map(banner =>{
-    return <SwiperSlide className={classes["slider-item"]}>
+  const swiperContent = banners.map((banner,index) =>{
+    return <SwiperSlide className={classes["slider-item"]} key={index}>
       <img src={banner} alt="banner" className={classes['slider-item__image']} />
     </SwiperSlide>
   })

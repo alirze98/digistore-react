@@ -7,12 +7,12 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper";
 import BlogsCarouselItem from "./BlogsCarouselItem";
-import classes from "./BlogsCarouselItems.module.css";
+
 
 const BlogsCarouselItems = (props) => {
     const items = props.data.map((item) => {
         return (
-            <SwiperSlide>
+            <SwiperSlide key={item.id}>
           <BlogsCarouselItem
             image={item.image}
             title={item.title}

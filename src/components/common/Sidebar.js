@@ -18,7 +18,7 @@ const Sidebar = () => {
         dispatch(sidebarActions.toggleSidebar())
     }
   return (
-    <div className={`${classes.sidebar} ${showSidebar && classes.hidden}`}>
+    <div className={`${classes.sidebar} ${showSidebar ? classes.hidden : ''}`}>
       <img src={logo} alt="Logo" />
       <Divider className={classes.divider} />
       <ul className={classes.list} onClick={toggleSidebarHandler}>

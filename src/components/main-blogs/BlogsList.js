@@ -5,7 +5,7 @@ import BlogsCarouselItem from "../blogs-carousel/BlogsCarouselItem";
 const BlogsList = (props) => {
   const content = props.data.map((item) => {
     return (
-      <Grid item xl={1} lg={1} md={1} sm={1} xs={1}>
+      <Grid item xl={1} lg={1} md={1} sm={1} xs={1} key={item.id}>
         <BlogsCarouselItem
           image={item.image}
           title={item.title}
