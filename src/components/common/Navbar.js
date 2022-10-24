@@ -32,22 +32,22 @@ const Navbar = () => {
      <div className={classes['nav-top']}>
         <Grid container className={classes['nav-top-container']}>
           <Grid item lg={3.5} md={3.5} sm={3.5} xs={3.5}>
-            <img src={logo} className={classes.logo} />
+            <img src={logo} className={classes.logo} alt='Logo image' />
           </Grid>
           <Grid item lg={5} md={5} sm={5} xs={5}>
             <div className={classes.search}>
               <input className={classes.input} placeholder='جستجو ...' />
-              <img src={searchIcon} />
+              <img src={searchIcon} alt='Search icon' />
             </div>
           </Grid>
           <Grid item lg={3.5} md={3.5} sm={3.5} xs={3.5} className={classes['login-register']}>
             <div className={classes['login-register__btn']}>
-              <img src={userIcon} />
+              <img src={userIcon} alt='User icon'/>
               <span>ورود / ثبت نام</span>
             </div>
            <div className={classes.cart}>
            <span className={classes['cart-amount']}>{totalItemsContent}</span>
-            <Link to={'/cart'}><img src={cartIcon} /></Link>
+            <Link to={'/cart'}><img src={cartIcon} alt='Cart icon' /></Link>
            </div>
           </Grid>
         </Grid>

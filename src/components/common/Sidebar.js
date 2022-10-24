@@ -9,15 +9,19 @@ import aboutusIcon from "../../assets/aboutus.svg";
 import githubIcon from "../../assets/github.svg";
 import searchIcon from "../../assets/search.svg";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-
+import { useSelector,useDispatch } from "react-redux";
+import { sidebarActions } from "../../store/sidebar-slice";
 const Sidebar = () => {
+    const dispatch = useDispatch()
     const showSidebar = useSelector(state => state.sidebar.sidebar);
+    const toggleSidebarHandler = () => {
+        dispatch(sidebarActions.toggleSidebar())
+    }
   return (
     <div className={`${classes.sidebar} ${showSidebar && classes.hidden}`}>
       <img src={logo} alt="Logo" />
       <Divider className={classes.divider} />
-      <ul className={classes.list}>
+      <ul className={classes.list} onClick={toggleSidebarHandler}>
       <Link to={'/'} className={classes.link}>
         <li className={classes.item}>
           <img src={homeIcon} alt="Home icon" />
@@ -36,7 +40,7 @@ const Sidebar = () => {
           <span>سبد خرید</span>
         </li>
         </Link>
-        <Link to={'/blog'} className={classes.link}>
+        <Link to={'/blogs'} className={classes.link}>
         <li className={classes.item}>
           <img src={searchIcon} alt="Blog icon" />
           <span>بلاگ</span>
