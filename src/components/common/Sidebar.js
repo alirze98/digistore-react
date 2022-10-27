@@ -22,45 +22,45 @@ const Sidebar = () => {
       <img src={logo} alt="Logo" />
       <Divider className={classes.divider} />
       <ul className={classes.list} onClick={toggleSidebarHandler}>
-        <Link to={"/"} className={classes.link}>
-          <li className={classes.item}>
+        <li className={classes.item}>
+          <Link to={"/"} className={classes.link}>
             <img src={homeIcon} alt="Home icon" />
             <span>صفحه نخست</span>
-          </li>
-        </Link>
-        <Link to={"/shop"} className={classes.link}>
-          <li className={classes.item}>
+          </Link>
+        </li>
+        <li className={classes.item}>
+          <Link to={"/shop"} className={classes.link}>
             <img src={shopIcon} alt="Shop icon" />
             <span>فروشگاه</span>
-          </li>
-        </Link>
-        <Link to={"/cart"} className={classes.link}>
-          <li className={classes.item}>
+          </Link>
+        </li>
+        <li className={classes.item}>
+          <Link to={"/cart"} className={classes.link}>
             <img src={cartIcon} alt="Cart icon" />
             <span>سبد خرید</span>
-          </li>
-        </Link>
-        <Link to={"/blogs"} className={classes.link}>
-          <li className={classes.item}>
+          </Link>
+        </li>
+        <li className={classes.item}>
+          <Link to={"/blogs"} className={classes.link}>
             <img src={searchIcon} alt="Blog icon" />
             <span>بلاگ</span>
-          </li>
-        </Link>
-        <Link to={"/"} className={classes.link}>
-          <li className={classes.item}>
+          </Link>
+        </li>
+        <li className={classes.item}>
+          <Link to={"/"} className={classes.link}>
             <img src={aboutusIcon} alt="About us icon" />
             <span>درباره ما</span>
-          </li>
-        </Link>
-        <Link
-          to={"https://github.com/alirze98/digistore-react.git"}
-          className={classes.link}
-        >
-          <li className={classes.item}>
+          </Link>
+        </li>
+        <li className={classes.item}>
+          <Link
+            to={"https://github.com/alirze98/digistore-react.git"}
+            className={classes.link}
+          >
             <img src={githubIcon} alt="Github icon" />
             <span>سورس کد</span>
-          </li>
-        </Link>
+          </Link>
+        </li>
       </ul>
     </div>
   );

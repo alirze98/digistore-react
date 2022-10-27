@@ -1,13 +1,14 @@
 .sidebar {
   position: fixed;
   top: 0;
+  right: 0;
   background-color: white;
   width: 70%;
   height: 100vh;
   padding: 20px;
   padding-top: 20px;
   font-size: 1em;
-  z-index: 20000;
+  z-index: 11000;
   transition: 0.5s ease;
 }
 .sidebar.hidden {
@@ -25,14 +26,16 @@
 }
 .sidebar .list .link {
   text-decoration: none;
-}
-.sidebar .list .item {
   display: flex;
   align-items: center;
+  color: inherit;
+}
+.sidebar .list .item {
   margin-bottom: 25px;
   color: #42474e;
   font-size: 0.8em;
   -webkit-text-stroke: 0.18px;
+ 
 }
 .sidebar .list .item img {
   margin-left: 15px;

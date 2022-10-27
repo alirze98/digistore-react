@@ -87,6 +87,7 @@
 
 /* responsive nav */
 .nav-responsive {
+  overflow-x: hidden;
 }
 .nav-responsive__top {
   display: flex;
