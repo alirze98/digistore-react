@@ -8,6 +8,7 @@ import SingleProduct from "./components/shop-products/SingleProduct";
 import SingleBlogs from "./components/main-blogs/SingleBlogs";
 import Sidebar from "./components/common/Sidebar";
 import Backdrop from "./components/common/Backdrop";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:blogId" element={<SingleBlogs />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </>
   );

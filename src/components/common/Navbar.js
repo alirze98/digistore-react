@@ -48,10 +48,10 @@ const Navbar = () => {
             xs={3.5}
             className={classes["login-register"]}
           >
-            <div className={classes["login-register__btn"]}>
+            <Link className={classes.link} to={'/signup'}><div className={classes["login-register__btn"]}>
               <img src={userIcon} alt="User icon" />
               <span>ورود / ثبت نام</span>
-            </div>
+            </div></Link>
             <div className={classes.cart}>
               <span className={classes["cart-amount"]}>
                 {totalItemsContent}

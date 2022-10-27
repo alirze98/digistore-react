@@ -1,0 +1,104 @@
+.signup-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(211, 212, 212, 0.253);
+  height: 100vh;
+  font-size: 1em;
+}
+.container {
+  display: flex;
+  margin-top: 50px;
+  width: 70%;
+}
+.container .left {
+  width: 35%;
+  background-color: var(--main-blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.left img {
+  width: 50px;
+  margin-bottom: 30px;
+}
+.left h4 {
+  font-weight: 400;
+}
+.container .right {
+  width: 65%;
+  background-color: white;
+  flex-grow: 1;
+  padding: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.right .form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.right .form-item .label {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+.right .form-item .input {
+  padding: 10px 5px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  outline: none;
+}
+.right .form-item .warn {
+  font-size: 0.8em;
+  color: red;
+}
+.right .send-btn-container {
+  margin-bottom: 20px;
+}
+.right .send-btn {
+  width: 100%;
+  background-color: var(--main-blue);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.right .login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login .login-btn {
+  border: none;
+  background-color: var(--main-blue);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.login span {
+  font-size: 0.8em;
+  color: var(--main-blue);
+}
+
+@media (max-width: 768px) {
+  .container .right {
+    font-size: 0.9em;
+  }
+  .container .right .input {
+    padding: 5px;
+  }
+  .container .right .send-btn {
+    padding: 7px;
+  }
+  .container .login .login-btn {
+    font-size: 0.7em;
+  }
+  .container .left {
+    display: none;
+  }
+}

@@ -13,6 +13,10 @@
   padding: 15px 75px 0px;
   background-color: white;
 }
+.link{
+  text-decoration: none;
+  color: inherit;
+}
 .nav-top-container {
   display: flex;
   align-items: center;
