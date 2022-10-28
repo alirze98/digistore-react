@@ -1,58 +1,131 @@
-import React from "react";
-import classes from "./SignupForm.module.css";
+import React, { useEffect, useState } from 'react';
+import {Formik} from "formik"
+
+//styles 
+import styles from "./SignupForm.module.css";
+
+//assets
+import { Link,useNavigate } from 'react-router-dom';
 import loginIcon from "../../assets/login.svg";
+import loader3 from "../../assets/loader3.gif";
+
+
+// validator function
+import { validator } from "../common/Functions";
+
 const SignupForm = () => {
-  return (
-    <div className={classes["signup-form"]}>
-      <div className={classes.container}>
-        <div className={classes.right}>
-          <form>
-            <div className={classes["form-item"]}>
-              <label htmlFor="userName" className={classes.label}>
-                نام کاربری
-              </label>
-              <input type="text" id="userName" className={classes.input} />
-              <span className={classes.warn}>نام کاربری الزامیست</span>
+    const navigate = useNavigate()
+    const[aouthed,setAouthed] = useState("forming")
+
+    //input values
+    const[values,setValues] = useState({
+        name:"",
+        email:"",
+        password:"",
+        confirmPassword:"",
+    })
+
+    //toched inputs
+    const[isToched,setIsToched] = useState({
+        name:false,
+        email:false,
+        password:false,
+        confirmPassword:false,
+    })
+
+    //validation errors
+    const[errors,setErrors] = useState({})
+
+    const changeHandler = (event) => {
+
+        setValues({
+            ...values,
+            [event.target.name] : event.target.value
+
+        })   
+    }
+    const clickHandler = (event) => {
+        setIsToched({
+            ...isToched,
+            [event.target.name]:true
+        })
+    }
+    const submitHandler = (event) => {
+        event.preventDefault()
+        if(Object.keys(errors).length > 0) {
+            setIsToched({
+                name:true,
+                email:true,
+                password:true,
+                confirmPassword:true,
+            })
+        }
+        else {
+            setAouthed("loading")
+            navigate('/')
+        }
+    }
+
+    useEffect(() => {
+        setErrors({...validator(values,"signup")})
+        
+    },[values,isToched])
+
+
+    return (
+        <div className={styles.loginParent}>
+            <div className={styles.parentForm}>
+                <div  className={styles.signUpForm}>
+                    <form onSubmit={submitHandler} className={styles.rightLogin}>
+        
+                        <div className={styles.row}>
+                            <label>نام کاربری</label>
+                            <input  onClick={clickHandler}  onChange={changeHandler} name="name" value={values.name} />
+                            { errors.name && isToched.name && <span className={styles.error}>{errors.name}</span>}
+                        </div>
+        
+                        <div className={styles.row}>
+                            <label> ایمیل</label>
+                            <input  onClick={clickHandler} onChange={changeHandler} name="email" value={values.email} />
+                            { errors.email && isToched.email && <span className={styles.error}>{errors.email}</span>}
+                        </div>
+        
+                        <div className={styles.row}>
+                            <label> رمز ورود</label>
+                            <input onClick={clickHandler} onChange={changeHandler} name="password" value={values.password} />
+                            { errors.password && isToched.password && <span className={styles.error}>{errors.password}</span>}
+                        </div>
+        
+                        <div className={styles.row}>
+                            <label> تایید رمز ورود</label>
+                            <input onClick={clickHandler} onChange={changeHandler} name="confirmPassword" value={values.confirmPassword} />
+                            { errors.confirmPassword && isToched.confirmPassword && <span className={styles.error}>{errors.confirmPassword}</span>}
+                        </div>
+        
+                        <button type="submit">
+                            {
+                                aouthed === "forming" ? "ارسال" :<img src={loader3} />
+                            }
+                           
+                        </button>
+        
+                        <div className={styles.hintLogin}>
+                            <p>   قبلا ثبت نام کرده اید ؟</p>
+                            <Link  to="/login">ورود</Link>
+                        </div>
+        
+                    </form>
+                    <div className={styles.leftLogin}>
+                        <div className={styles.loginImage}>
+                            <img src={loginIcon} alt="icon"/>
+                        </div>
+                        <h5>ساخت حساب کاربری</h5>
+                    </div>
+                </div>
             </div>
-            <div className={classes["form-item"]}>
-              <label htmlFor="email" className={classes.label}>
-                ایمیل
-              </label>
-              <input type="email" id="email" className={classes.input} />
-              <span className={classes.warn}>لطفا یک ایمیل وارد کنید</span>
-            </div>
-            <div className={classes["form-item"]}>
-              <label htmlFor="userName" className={classes.label}>
-                رمز ورود
-              </label>
-              <input type="text" id="userName" className={classes.input} />
-              <span className={classes.warn}>رمز عبور الزامیست</span>
-            </div>
-            <div className={classes["form-item"]}>
-              <label htmlFor="confirm" className={classes.label}>
-                تایید رمز ورود
-              </label>
-              <input type="text" id="confirm" className={classes.input} />
-              <span className={classes.warn}>تایید رمز عبور را وارد کنید</span>
-            </div>
-            <div className={classes["send-btn-container"]}>
-              <button className={classes["send-btn"]}>ارسال</button>
-            </div>
-            <div className={classes["login"]}>
-              <span>قبلا ثبت نام کرده اید ؟</span>
-              <button className={classes["login-btn"]}>
-                ورود به حساب کاربری
-              </button>
-            </div>
-          </form>
-        </div>
-        <div className={classes.left}>
-          <img src={loginIcon} alt="" />
-          <h4>ساخت حساب کاربری</h4>
-        </div>
-      </div>
-    </div>
-  );
+                <div  className={styles.formBackground}></div>
+        </div> 
+    );
 };
 
 export default SignupForm;

@@ -1,104 +1,138 @@
-.signup-form {
+.loginParent {
+  background: #fff;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2000;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: rgba(211, 212, 212, 0.253);
-  height: 100vh;
-  font-size: 1em;
-}
-.container {
-  display: flex;
-  margin-top: 50px;
-  width: 70%;
-}
-.container .left {
-  width: 35%;
-  background-color: var(--main-blue);
-  color: white;
-  display: flex;
+  justify-content:center;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
 }
-.left img {
-  width: 50px;
-  margin-bottom: 30px;
+.parentForm {
+  width:60%;
+  height:580px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 300;
+  background-color: #fff;
 }
-.left h4 {
-  font-weight: 400;
+.formBackground {
+  position: fixed;
+  background-color: rgba(61, 61, 61, 0.703);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  backdrop-filter: 10px;
 }
-.container .right {
-  width: 65%;
-  background-color: white;
-  flex-grow: 1;
-  padding: 20px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+.loginForm , .signUpForm {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
 }
-.right .form-item {
+.rightLogin {
+  width: 61.5%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  align-items: center;
+  padding: 30px 30px;
 }
-.right .form-item .label {
-  margin-bottom: 5px;
-  font-size: 0.9em;
-}
-.right .form-item .input {
-  padding: 10px 5px;
-  border: 1px solid #999;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  outline: none;
-}
-.right .form-item .warn {
-  font-size: 0.8em;
-  color: red;
-}
-.right .send-btn-container {
-  margin-bottom: 20px;
-}
-.right .send-btn {
+.rightLogin button {
   width: 100%;
-  background-color: var(--main-blue);
-  color: white;
-  border: none;
-  padding: 10px;
+  background-color: #0089ff;
+  color: #fff;
   border-radius: 5px;
+  border: none;
+  padding: 12px 0;
+  margin-top: 20px;
+  cursor: pointer;
 }
-.right .login {
+.rightLogin button img{
+  height: 15px;
+}
+.leftLogin {
+  width: 38%;
+  background-color: #0089ff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 150px;
+}       
+.leftLogin h5 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  /* -webkit-text-stroke: 0.5px; */
+  margin-top: 10px;
+}
+.loginImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  /* background-color: #fff; */
+
+}
+.loginImage img {
+  width: 45px;
+  height: 45px;
+}
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 95px;
+  
+}
+.row label{
+  font-size: 14px;
+}
+.row input {
+  border: 1px solid #c6c6c6;
+  height: 43px;
+  outline: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+.row span.error {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+}
+.hintLogin {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top:30px ;
 }
-.login .login-btn {
-  border: none;
-  background-color: var(--main-blue);
-  color: white;
-  padding: 10px;
+.hintLogin p {
+  color: #0089ff;
+  font-size: 12px;
+}
+.hintLogin a {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0089ff;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 40px;
+  font-size: 12px;
 }
-.login span {
-  font-size: 0.8em;
-  color: var(--main-blue);
+.signUpForm .row{
+  margin-bottom: 10px;
 }
-
-@media (max-width: 768px) {
-  .container .right {
-    font-size: 0.9em;
-  }
-  .container .right .input {
-    padding: 5px;
-  }
-  .container .right .send-btn {
-    padding: 7px;
-  }
-  .container .login .login-btn {
-    font-size: 0.7em;
-  }
-  .container .left {
-    display: none;
-  }
+.signUpForm .hintLogin {
+  margin-top: 10px;
 }
