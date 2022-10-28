@@ -137,7 +137,7 @@ const Navbar = () => {
               className={classes["nav-responsive__heart"]}
             >
               <img src={heartIcon} alt="" />
-              <button>ورود</button>
+              <Link to={'/signup'}><button>ورود</button></Link>
             </Grid>
           </Grid>
         </div>

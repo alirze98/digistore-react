@@ -136,3 +136,25 @@
   .signUpForm .hintLogin {
     margin-top: 10px;
   }
+
+  @media (max-width:460px){
+    .parentForm{
+      width: 100%;
+      height: 100vh;
+      border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    }
+    .loginForm{
+      justify-content: center;
+      
+    }
+   .leftLogin{
+    display: none;
+   } 
+   .hintLogin .link{
+    min-width: 100px;
+    
+   }
+  }

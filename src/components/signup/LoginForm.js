@@ -106,7 +106,7 @@ const LoginForm = () => {
             <div className={styles.hintLogin}>
               <p>حساب کاربری ندارید ؟</p>
 
-              <Link to="/signup"> ایجاد حساب کاربری </Link>
+              <Link to="/signup" className={styles.link}> ایجاد حساب کاربری </Link>
             </div>
           </form>
           <div className={styles.leftLogin}>
