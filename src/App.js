@@ -10,6 +10,7 @@ import Sidebar from "./components/common/Sidebar";
 import Backdrop from "./components/common/Backdrop";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/blogs/:blogId" element={<SingleBlogs />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
